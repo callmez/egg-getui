@@ -190,6 +190,7 @@ function pushMessageToList() {
 }
 
 function pushMessageToApp(options) {
+    console.log(options, '###########')
     // var taskGroupName = 'test';
     var taskGroupName = null;
     var template = NotificationTemplateDemo(options.template);
@@ -267,18 +268,19 @@ function LinkTemplateDemo() {
     return template;
 }
 
-function NotificationTemplateDemo(template) {
+function NotificationTemplateDemo(options) {
+    console.log(options, '%%%%%%%%%%%%%')
     var template = new NotificationTemplate({
         appId: APPID,
         appKey: APPKEY,
-        title: template.title,
-        text: template.text,
-        logo: template.log,
+        title: options.title,
+        text: options.text,
+        logo: options.log,
         isRing: true,
         isVibrate: true,
         isClearable: true,
         transmissionType: 1,
-        transmissionContent: template.content
+        transmissionContent: options.content
     });
     return template;
 }

@@ -1,0 +1,34 @@
+{
+  "name": "egg-getui",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callmez/egg-getui.git"
+  },
+  "keywords": [
+    "egg",
+    "getui"
+  ],
+  "author": "callme-z@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callmez/egg-getui/issues"
+  },
+  "homepage": "https://github.com/callmez/egg-getui#readme",
+  "dependencies": {
+    "request": "^2.87.0",
+    "zlib": "^1.0.5",
+    "crypto": "^1.0.1",
+    "protobufjs": "5.0.1"
+  },
+  "eggPlugin": {
+    "name": "getui"
+  },
+  "_from": "egg-getui@1.0.1",
+  "_resolved": "http://registry.npm.taobao.org/egg-getui/download/egg-getui-1.0.1.tgz"
+}

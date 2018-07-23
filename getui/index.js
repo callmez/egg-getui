@@ -266,7 +266,7 @@ function NotificationTemplateDemo(template) {
         appKey: APPKEY,
         title: template.title,
         text: template.text,
-        logo: template.log
+        logo: template.log,
         isRing: true,
         isVibrate: true,
         isClearable: true,

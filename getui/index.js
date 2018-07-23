@@ -17,6 +17,7 @@ var TransmissionTemplate = require('./getui/template/TransmissionTemplate');
 var SingleMessage = require('./getui/message/SingleMessage');
 var AppMessage = require('./getui/message/AppMessage');
 var ListMessage = require('./getui/message/ListMessage');
+var Promise = require('bluebird')
 
 // http的域名
 // var HOST = 'http://sdk.open.api.igexin.com/apiex.htm';
@@ -206,9 +207,15 @@ function pushMessageToApp(options) {
         speed: 10000
     });
 
-    gt.pushMessageToApp(message, taskGroupName, function (err, res) {
-        console.log(res);
-    });
+    return new Promise(function(resolve, reject) {
+        gt.pushMessageToApp(message, taskGroupName, function (err, res) {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(res)
+            }
+        });
+    })
 }
 
 module.exports.pushMessageToApp = pushMessageToApp
@@ -385,7 +392,6 @@ function init(opts) {
     APPKEY = opts.appKey
     MASTERSECRET = opts.masterSecret
     HOST = opts.host
-    console.log(opts, 123123)
 
     gt = new GeTui(HOST, APPKEY, MASTERSECRET)
 }

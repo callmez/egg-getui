@@ -223,7 +223,6 @@ GeTui.prototype.getContentId = function (message, taskGroupName, callback) {
     }
 
     this.httpPostJson(this._host, postData, false, function (err, response) {
-    console.log(postData, response)
         if (!err && response.result === 'ok' && response.contentId) {
             callback && callback(null, response.contentId);
         } else {

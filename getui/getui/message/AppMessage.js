@@ -4,7 +4,6 @@ var util = require('util');
 var Message = require('./Message');
 
 function AppMessage(options) {
-    console.log(options)
     Message.call(this, options);
     options = util._extend({
         appIdList: [],

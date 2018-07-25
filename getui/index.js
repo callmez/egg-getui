@@ -190,7 +190,6 @@ function pushMessageToList() {
 }
 
 function pushMessageToApp(options) {
-    console.log(options, '###########')
     // var taskGroupName = 'test';
     var taskGroupName = null;
     var template = NotificationTemplateDemo(options.template);
@@ -269,7 +268,6 @@ function LinkTemplateDemo() {
 }
 
 function NotificationTemplateDemo(options) {
-    console.log(options, '%%%%%%%%%%%%%')
     var template = new NotificationTemplate({
         appId: APPID,
         appKey: APPKEY,
